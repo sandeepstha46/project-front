@@ -1,0 +1,38 @@
+:root {
+    --primary-color: #000;
+    --secondary-color: #fff;
+    --background-color: #1E1E1E;
+    /* font */
+    --header-font: 'Barlow Condensed';
+    --paragraph-font: 'Nunito';
+    /* section */
+    --section-gap: 100px 0px;
+    /* button style */
+    --primary-button--stroke: 2px solid var(--secondary-color);
+    --primary-button--color: var(--primary-color);
+    --secondary-button--color: var(--secondary-color);
+    --secondary-button--stroke: 2px solid var(--primary-color);
+    --button--background: transparent;
+}
+
+body {
+    font-family: var(--paragraph-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+    font-family: var(--header-font);
+}
+
+h1 {
+    font-size: 58px;
+}
+
+h2 {
+    font-size: 38px;
+}
