@@ -22,8 +22,61 @@
 </head>
 
 <body>
-
-    <header></header>
+    <header>
+        <section class="navbar-section">
+            <div class="container">
+                <div class="row navbar-section__row">
+                    <div class="col-lg-3 navbar-section__logo">
+                        <a href="index.html">
+                            <img class="img-fluid" src="/assets/img/logo.png" alt="Sisha Logo" />
+                        </a>
+                    </div>
+                    <!-- menu -->
+                    <div class="hamburger">
+                        <a class="hamburger-menu" href="javascript:void(0)"></a>
+                    </div>
+                    <div class="col-lg-6 navbar-section__menu d-none">
+                        <ul class="list-unstyled navbar-section__menu--lists">
+                            <li class="active">
+                                <a href="">home</a>
+                            </li>
+                            <li>
+                                <a href="">about us</a>
+                            </li>
+                            <li>
+                                <a href="">shop</a>
+                            </li>
+                            <li>
+                                <a href="">blog</a>
+                            </li>
+                            <li>
+                                <a href="">contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 navbar-section__icons d-none">
+                        <ul class="list-unstyled navbar-section__icons--lists">
+                            <li>
+                                <a href="">
+                                    <i class="bi bi-person-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="bi bi-cart-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="bi bi-heart-fill"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
 
     <main></main>
 
@@ -36,12 +89,21 @@
     <!-- Custom Js -->
     <script>
         var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            effect: "fade",
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
         });
     </script>
+
+    <!-- Navbar JS -->
+    <script src="/assets/js/navbar.js"></script>
 </body>
 
 </html>
