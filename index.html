@@ -78,7 +78,28 @@
         </section>
     </header>
 
-    <main></main>
+    <main>
+        <!-- Carousel -->
+        <section class="carousel">
+            <div class="swiper carousel-section">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="carousel-section__items">
+                            <img src="/assets/img/vaping.jpg" alt="carousel-1" />
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/assets/img/vape-1.jpg" alt="carousel-1" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/assets/img/vape-2.jpg" alt="carousel-1" />
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+    </main>
 
     <footer></footer>
 
@@ -88,9 +109,9 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <!-- Custom Js -->
     <script>
-        var swiper = new Swiper(".mySwiper", {
+        var swiper = new Swiper(".carousel-section", {
             spaceBetween: 30,
-            effect: "fade",
+            loop: true,
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
