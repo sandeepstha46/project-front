@@ -159,7 +159,7 @@
             </div>
         </section>
         <!-- Categories -->
-        <div class="categories">
+        <section class="categories">
             <div class="container">
                 <div class="row categories__items">
                     <div class="categories__items--title-navigation">
@@ -169,7 +169,7 @@
                             <button class="btn best-selling inactive-category" type="button" data-bs-target="#collapseBestSelling" aria-expanded="true" aria-controls="collapseBestSelling">best selling</button>
                         </div>
                         <div class="categories__items--navigation">
-                            <div class="swiper-button-prev categories-button-prev">
+                            <div class="swiper-button-prev categories-button-prev" tabindex="-1">
                                 <i class="bi bi-arrow-left-square"></i>
                             </div>
                             <div class="swiper-button-next categories-button-next">
@@ -310,7 +310,47 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <!-- Options -->
+        <section class="options">
+            <div class="container">
+                <div class="options__content">
+                    <div class="options__content--featured options__content--item">
+                        <img class="img-fluid" src="/assets/img/featured.jpg" alt="" />
+                        <div class="options__content--item-top">
+                            <h2>featured items</h2>
+                        </div>
+                        <div class="options__content--item-bottom">
+                            <a href="">
+                                <button class="btn secondary-button">Explore</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="options__content--device options__content--item">
+                        <img class="img-fluid" src="/assets/img/device.jpg" alt="" />
+                        <div class="options__content--item-top">
+                            <h2>vape devices</h2>
+                        </div>
+                        <div class="options__content--item-bottom">
+                            <a href="">
+                                <button class="btn secondary-button">Explore</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="options__content--flavors options__content--item">
+                        <img class="img-fluid" src="/assets/img/falvors.jpg" alt="" />
+                        <div class="options__content--item-top">
+                            <h2>flavors</h2>
+                        </div>
+                        <div class="options__content--item-bottom">
+                            <a href="">
+                                <button class="btn secondary-button">Explore</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer></footer>
@@ -409,7 +449,7 @@
                 1200: {
                     slidesPerView: 5,
                     spaceBetween: 25,
-                }
+                },
             },
         });
     </script>
@@ -417,5 +457,7 @@
     <!-- Navbar JS -->
     <script src="/assets/js/navbar.js"></script>
 </body>
+
+</html>
 
 </html>
