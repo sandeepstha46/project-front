@@ -805,6 +805,12 @@ ul {
     .section__content {
         padding-top: 40px;
     }
+    .section__item {
+        height: 520px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
     .section__item .section__item--title {
         padding: 10px 0px;
     }
