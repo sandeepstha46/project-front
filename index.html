@@ -782,6 +782,61 @@
                 </div>
             </div>
         </section>
+        <!-- Flavors -->
+        <section class="flavors">
+            <div class="container">
+                <div class="row">
+                    <div class="section__header text-center">
+                        <h2>Best Flavors</h2>
+                    </div>
+                </div>
+                <div class="swiper flavors__slides">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="flavors__image text-center">
+                                <img class="img-fluid" src="/assets/img/orange.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flavors__image text-center">
+                                <img class="img-fluid" src="/assets/img/ice.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flavors__image text-center">
+                                <img class="img-fluid" src="/assets/img/lemon.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flavors__image text-center">
+                                <img class="img-fluid" src="/assets/img/chery.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flavors__image text-center">
+                                <img class="img-fluid" src="/assets/img/orange.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flavors__image text-center">
+                                <img class="img-fluid" src="/assets/img/ice.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flavors__image text-center">
+                                <img class="img-fluid" src="/assets/img/lemon.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flavors__image text-center">
+                                <img class="img-fluid" src="/assets/img/chery.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination flavors__pagination pagination__style"></div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer></footer>
@@ -894,6 +949,34 @@
             },
             pagination: {
                 el: ".brands__pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                319: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 25,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 25,
+                },
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 25,
+                },
+            },
+        });
+
+        // Brand Carousel JS
+        var swiper = new Swiper(".flavors__slides", {
+            slidesPerView: 1,
+            spaceBetween: 25,
+            pagination: {
+                el: ".flavors__pagination",
                 clickable: true,
             },
             breakpoints: {
