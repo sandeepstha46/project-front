@@ -330,7 +330,7 @@ ul {
 
 @media(max-width: 767px) {
     .carousel {
-        margin-top: -100gcpx;
+        margin-top: -100px;
     }
     .carousel .carousel-section img {
         height: 650px;
@@ -702,7 +702,6 @@ ul {
     position: relative;
     color: var(--primary-color);
     background-color: #F3F3F3;
-    height: 418px;
 }
 
 .best .best__item img {
@@ -715,6 +714,10 @@ ul {
 .best .best__item img:hover {
     transform: scale(1.1);
     transition: all 0.2s ease-in-out;
+}
+
+.best .best__item .best__item--title h2 {
+    font-weight: 600;
 }
 
 .best .best__item .best__item--top-left {
@@ -756,4 +759,62 @@ ul {
 
 .best .best__button {
     padding-top: 60px;
+}
+
+@media(max-width: 567px) {
+    .best {
+        padding: 30px 0px;
+    }
+    .best .best__content {
+        padding-top: 30px;
+    }
+    .best .best__item {
+        padding: 30px 16px;
+    }
+    .best .best__item img {
+        width: 150px;
+        height: 150px;
+    }
+    .best .best__item .best__item--title {
+        padding: 10px 0px 20px;
+    }
+    .best .best__item .best__item--title h2 {
+        font-size: 30px;
+    }
+    .best .best__item .best__item--buttons {
+        flex-direction: column;
+    }
+    .best .best__button {
+        padding-top: 30px;
+    }
+}
+
+@media(min-width:568px) and (max-width: 991px) {
+    .best {
+        padding: 30px 0px;
+    }
+    .best .best__content {
+        padding-top: 30px;
+    }
+    .best .best__button {
+        padding-top: 30px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .best {
+        padding: 40px 0px;
+    }
+    .best .best__content {
+        padding-top: 40px;
+    }
+    .best .best__item .best__item--title {
+        padding: 10px 0px;
+    }
+    .best .best__item .best__item--buttons {
+        flex-direction: column;
+    }
+    .best .best__button {
+        padding-top: 40px;
+    }
 }
