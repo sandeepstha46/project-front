@@ -29,11 +29,12 @@ h6 {
     text-transform: uppercase;
     font-family: var(--header-font);
     margin: 0;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 h1 {
     font-size: 58px;
-    font-weight: 700;
 }
 
 h2 {
@@ -584,9 +585,7 @@ ul {
 }
 
 .options .options__content--item h2 {
-    font-weight: 700;
     color: var(--secondary-color);
-    letter-spacing: 2px;
 }
 
 .options .options__content--item .options__content--item-bottom {
@@ -684,11 +683,6 @@ ul {
     padding: var(--section-gap);
     color: var(--secondary-color);
     background-color: var(--background-color);
-}
-
-.best .best__header h2 {
-    font-weight: 700;
-    letter-spacing: 2px;
 }
 
 .best .best__content {
@@ -817,4 +811,40 @@ ul {
     .best .best__button {
         padding-top: 40px;
     }
+}
+
+
+/* Brands */
+
+.brands {
+    padding: 60px 0px 30px;
+}
+
+.brands .brandsList {
+    padding-top: 40px;
+}
+
+.brands .brandsList .brands__content--logo img {
+    opacity: 0.5;
+    transition: all 0.2s ease-in-out;
+}
+
+.brands .brandsList .brands__content--logo img:hover {
+    opacity: 1;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.brands .brands__pagination {
+    padding-top: 40px;
+    position: relative;
+}
+
+.brands .swiper-pagination-bullet {
+    width: 9px;
+    height: 9px;
+}
+
+.brands .swiper-pagination-bullet-active {
+    background-color: #000;
 }

@@ -548,6 +548,59 @@
                 </div>
             </div>
         </section>
+        <!-- Brands -->
+        <section class="brands">
+            <div class="container">
+                <div class="brands__title text-center">
+                    <h2>From the best brand</h2>
+                </div>
+                <div class="swiper brandsList">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="brands__content--logo">
+                                <img class="img-fluid" src="/assets/img/vaporesso.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brands__content--logo">
+                                <img class="img-fluid" src="/assets/img/vgod.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brands__content--logo">
+                                <img class="img-fluid" src="/assets/img/geekvape.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brands__content--logo">
+                                <img class="img-fluid" src="/assets/img/beard-vape.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brands__content--logo">
+                                <img class="img-fluid" src="/assets/img/vaporesso.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brands__content--logo">
+                                <img class="img-fluid" src="/assets/img/vgod.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brands__content--logo">
+                                <img class="img-fluid" src="/assets/img/geekvape.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brands__content--logo">
+                                <img class="img-fluid" src="/assets/img/beard-vape.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination brands__pagination"></div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer></footer>
@@ -636,15 +689,47 @@
                     spaceBetween: 20,
                 },
                 768: {
-                    slidesPerView: 3,
+                    slidesPerView: 2,
                     spaceBetween: 25,
                 },
                 1024: {
-                    slidesPerView: 4,
+                    slidesPerView: 3,
                     spaceBetween: 25,
                 },
                 1200: {
-                    slidesPerView: 5,
+                    slidesPerView: 4,
+                    spaceBetween: 25,
+                },
+            },
+        });
+
+        // Brand Carousel JS
+        var swiper = new Swiper(".brandsList", {
+            slidesPerView: 1,
+            spaceBetween: 25,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".brands__pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                319: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 25,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 25,
+                },
+                1200: {
+                    slidesPerView: 4,
                     spaceBetween: 25,
                 },
             },
