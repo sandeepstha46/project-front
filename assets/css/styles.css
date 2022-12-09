@@ -8,7 +8,7 @@
     /* section */
     --section-gap: 100px 0px;
     /* button style */
-    --primary-button--stroke: 2px solid var(--secondary-color);
+    --primary-button--stroke: 2px solid var(--primary-color);
     --primary-button--color: var(--primary-color);
     --secondary-button--color: var(--secondary-color);
     --secondary-button--stroke: 2px solid var(--secondary-color);
@@ -62,16 +62,15 @@ ul {
 }
 
 .primary-button {
-    margin-top: 35px;
     padding: 13px 36px;
     text-transform: uppercase;
     border: var(--primary-button--stroke);
-    color: var(--secondary-button--color);
+    color: var(--primary-button--color);
 }
 
 .primary-button:hover {
-    background-color: var(--secondary-color);
-    color: var(--primary-button--color);
+    background-color: var(--primary-color);
+    color: var(--secondary-button--color);
     border: var(--primary-button--stroke);
 }
 
@@ -299,6 +298,10 @@ ul {
 .carousel .carousel-section .carousel-section__items .carousel-section__items--content .carousel-section__items--content--stitle,
 .carousel-section__items--content--sparagraph {
     padding-right: 5px;
+}
+
+.carousel .carousel-section__items--sparagraph {
+    padding-bottom: 30px;
 }
 
 .carousel .carousel-section .carousel-section__items--content .carousel-section__items--navigation {
