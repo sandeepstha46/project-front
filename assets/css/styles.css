@@ -957,3 +957,10 @@ ul {
         padding-top: 14px;
     }
 }
+
+
+/* Second Banner */
+
+.second-banner {
+    background-image: url('/assets/img/second-banner.jpg');
+}
