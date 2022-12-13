@@ -1355,22 +1355,27 @@ header {
 }
 
 .lists .lists__item-card .lists__item-card--top-left{
-    top: 0;
-    left: 10px;
+    top: 8px;
+    left: 15px;
     position: absolute;
 }
 
 .lists .lists__item-card .lists__item-card--top-left .bi-star{
-    font-size: 12px;
+    font-size: 20px;
     color: #FFC700;
 }
 
 .lists .lists__item-card--top-right{
     top: 10px;
-    right: 10px;
+    right: 15px;
     display: grid;
     position: absolute;
+    gap: 5px;
     color: rgba(0, 0, 0, .5);
+}
+
+.lists .lists__item-card .lists__item-card--top-right .bi-heart, .bi-cart{
+    font-size: 20px;
 }
 
 .lists .lists__item-card--top-right .bi:hover{
@@ -1395,10 +1400,10 @@ header {
 }
 
 .lists .lists__item-card--texts .item-card__title{
-    font-weight: 600;
+    font-weight: 500;
     font-size: 33px;
-    padding: 10px 0px 24px;
-    text-transform: uppercase;
+    padding: 10px 0px 22px;
+    text-transform: capitalize;
     font-family: var(--header-font);
     color: var(--primary-color);
 }
