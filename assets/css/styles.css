@@ -46,6 +46,7 @@ a:focus-visible {
 
 p {
     margin: 0;
+    line-height: 1;
 }
 
 ul {
@@ -1247,6 +1248,10 @@ header {
     column-gap: 10px;
 }
 
+.navbar-data__icons--wishlist, .navbar-data__icons--cart{
+    margin: auto 0;
+}
+
 .navbar-data ,.navbar-data__icons .bi-person{
     font-size: 24px;
 }
@@ -1375,9 +1380,10 @@ header {
 .lists .lists__item-card--texts .item-card__title{
     font-weight: 600;
     font-size: 24px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     text-transform: uppercase;
     font-family: var(--header-font);
+    color: var(--primary-color);
 }
 
 .lists .lists__item-card--cta{
@@ -1397,7 +1403,6 @@ header {
 
 .lists .lists__item-card--price .discounted-price{
     color: rgba(0, 0, 0, .4);
-    margin-bottom: -10px;
 }
 
 .lists .lists__item-card--price strike span{
