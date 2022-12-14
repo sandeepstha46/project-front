@@ -1375,7 +1375,7 @@ header {
     display: grid;
 }
 
-.lists .lists-products > .row:not(:last-child){
+.lists .products > .row:not(:last-child){
     padding-bottom: 60px;
 }
 
@@ -1488,33 +1488,34 @@ header {
 }
 
 /* View Product */
-.product{
-    padding: 50px 0px 100px;
+
+.products > .lists__products:not(:last-child){
+    padding-bottom: 40px;
 }
 
-.product .product__content{
+.products .product__content{
     display: grid;
     grid-template-columns: 100px 600px auto;
 }
 
-.product .product__content .product__content--image-list{
+.products .product__content .product__content--image-list{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.product .product__content .product__content--image-list .product__content--list-item{
+.products .product__content .product__content--image-list .product__content--list-item{
     text-align: center;
     max-height: 80px;
 }
 
-.product .product__content .product__content--image-list img{
+.products .product__content .product__content--image-list img{
     width: 80px;
     padding: 10px;
     background-color: #D9D9D9;
 }
 
-.product .product__content .product__content--image img{
+.products .product__content .product__content--image img{
     width: 100%;
 }
 
@@ -1536,7 +1537,7 @@ header {
         padding-bottom: 10px;
     }
 
-    .lists-products{
+    .products{
         margin: 16px 0px;
     }
 
@@ -1595,7 +1596,7 @@ header {
         padding-bottom: 10px;
     }
 
-    .lists-products{
+    .products{
         margin: 16px 0px;
     }
 
@@ -1655,7 +1656,7 @@ header {
         padding-bottom: 10px;
     }
 
-    .lists-products{
+    .products{
         margin: 16px 0px;
     }
 
@@ -1721,7 +1722,7 @@ header {
         grid-template-columns: repeat(2,1fr);
     }
 
-    .lists-products{
+    .products{
         padding-top: 10px;
     }
 }
@@ -1735,7 +1736,7 @@ header {
         padding-bottom: 20px;
     }
 
-    .lists-products{
+    .products{
         padding-left: 20px;
     }
 
@@ -1755,7 +1756,7 @@ header {
         padding-bottom: 20px;
     }
 
-    .lists-products{
+    .products{
         padding-left: 20px;
     }
 
@@ -1773,7 +1774,7 @@ header {
     .product-list{
         grid-template-columns: 200px auto;
     }
-    .lists-products{
+    .products{
         padding-left: 30px;
     }
     .lists-data > .lists__category:not(:last-child){
@@ -1795,7 +1796,7 @@ header {
     .product-list{
         grid-template-columns: 250px auto;
     }
-    .lists-products{
+    .products{
         padding-left: 50px;
     }
     .lists-data > .lists__category:not(:last-child){
