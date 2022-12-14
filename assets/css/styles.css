@@ -1282,7 +1282,7 @@ header {
     color: rgba(0, 0, 0, .5);
 }
 
-@media(max-width: 767px){
+@media(max-width: 1200px){
     .navbar-data__component, .navbar-data .navbar-data__icons{
         display: none;
     }
@@ -1291,6 +1291,10 @@ header {
 /* Category Banner */
 .category-banner{
     margin-bottom: 21px;
+}
+
+.category-banner > .container-fluid{
+    padding: 0px;
 }
 
 .category-banner img{
@@ -1726,6 +1730,11 @@ header {
     .product-list{
         grid-template-columns: 250px auto;
     }
+
+    .lists-data > .lists__category:not(:last-child){
+        padding-bottom: 20px;
+    }
+
     .lists-products{
         padding-left: 20px;
     }
@@ -1733,5 +1742,73 @@ header {
     .lists__products--items{
         gap: 10px;
         grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+@media (min-width: 1200px) and (max-width: 1399px){
+    .product-list{
+        grid-template-columns: 250px auto;
+    }
+
+    .lists-data > .lists__category:not(:last-child){
+        padding-bottom: 20px;
+    }
+
+    .lists-products{
+        padding-left: 20px;
+    }
+
+    .lists .lists__item-card{
+        padding: 10px;
+    }
+
+    .lists__products--items{
+        gap: 20px;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media(min-width: 1400px) and (max-width: 1599px){
+    .product-list{
+        grid-template-columns: 200px auto;
+    }
+    .lists-products{
+        padding-left: 30px;
+    }
+    .lists-data > .lists__category:not(:last-child){
+        padding-bottom: 20px;
+    }
+    .lists .lists__item-card{
+        padding: 16px;
+    }
+    .lists__products--items{
+        gap: 24px;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .lists .item-price__amount{
+        font-size: 28px;
+    }
+}
+
+@media(min-width: 1600px){
+    .product-list{
+        grid-template-columns: 250px auto;
+    }
+    .lists-products{
+        padding-left: 50px;
+    }
+    .lists-data > .lists__category:not(:last-child){
+        padding-bottom: 20px;
+    }
+    .lists .lists__item-card{
+        padding: 24px;
+    }
+    .lists__products--items{
+        gap: 20px;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .lists .item-price__amount{
+        font-size: 38px;
     }
 }
