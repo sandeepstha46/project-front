@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <!-- Nunit Font -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/magnifier.css" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/assets/css/styles.css" />
   </head>
@@ -23,7 +24,7 @@
   <body>
     <header>
       <section class="navbar-data">
-        <div class="container-fluid">
+        <div class="container">
           <div class="navbar-data__content">
             <div class="logo">
               <a href="/">
@@ -66,11 +67,11 @@
 
     <main>
       <section class="breadcrumbs">
-        <div class="container-fluid">
+        <div class="container">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Shop</a></li>
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item"><a href="/shop.html">Shop</a></li>
               <li class="breadcrumb-item active" aria-current="page">gold mage hookah 16"</li>
             </ol>
           </nav>
@@ -81,22 +82,25 @@
           <div class="single-item__content">
             <div class="single-item__content--image-list">
               <div class="single-item__content--list-item">
-                <img src="/assets/img/gold.png" alt="" />
+                <img class="list__image" src="/assets/img/gold.png" alt="" />
               </div>
               <div class="single-item__content--list-item">
-                <img src="/assets/img/gold.png" alt="" />
+                <img class="list__image" src="/assets/img/gold.png" alt="" />
               </div>
               <div class="single-item__content--list-item">
-                <img src="/assets/img/gold.png" alt="" />
+                <img class="list__image" src="/assets/img/gold.png" alt="" />
               </div>
               <div class="single-item__content--list-item">
-                <img src="/assets/img/gold.png" alt="" />
+                <img class="list__image" src="/assets/img/gold.png" alt="" />
               </div>
             </div>
             <div class="single-item__content--image">
-              <img src="/assets/img/gold-lg.png" alt="" />
+              <div class="magnifier-thumb-wrapper">
+                <img id="thumb" class="list__main-image" src="/assets/img/gold-lg.png" alt="" />
+              </div>
             </div>
             <div class="single-item__content--item">
+              <div class="magnifier-preview" id="preview"></div>
               <h2 class="single-item__product-name">gold mage hookah 16"</h2>
               <p class="single-item__vendor">Vendor: Vendor</p>
               <div class="single-item__rating">
@@ -114,13 +118,29 @@
                   <li>Chubby Unicorn Bottle</li>
                   <li>Child Resistant Cap</li>
                   <li>50% VG</li>
-                  <li>50% PG </li>
+                  <li>50% PG</li>
                   <li>Nicotine Salts Formulation</li>
                   <li>Made in USA</li>
                   <li>Nicotine Strength : 25mg</li>
                 </ul>
               </div>
-              <div class="single-item__cta"></div>
+              <div class="single-item__cta">
+                <div class="cta__quantity">
+                  <input type="text" value="1" id="quantity__amount" />
+                  <div class="quantity__count">
+                    <span class="plus-amount" onClick="increaseCount(event, this)">+</span>
+                    <span class="sub-amount" onClick="decreaseCount(event, this)">-</span>
+                  </div>
+                </div>
+                <div class="cta__add">
+                  <div class="cta__cart">
+                    <i class="bi bi-cart"></i>
+                  </div>
+                </div>
+                <div class="cta__button">
+                  <button class="btn primary-button single-item__buy">BUY NOW</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -132,7 +152,7 @@
             <div class="lists__products--title">
               <h5>Recommended Products</h5>
             </div>
-            <div class="recommended-items">
+            <div class="lists__products--items">
               <div class="lists__item-card">
                 <div class="lists__item-card--top">
                   <div class="lists__item-card--top-left">
@@ -303,7 +323,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="container-fluid">
+      <div class="container">
         <div class="footer__menu">
           <div class="footer__menu--quick">
             <ul class="list-unstyled footer__menu--links">
@@ -371,7 +391,7 @@
         <hr />
         <div class="footer__copyright">
           <div class="footer__copyright--logo">
-            <img class="img-fluid" src="/assets/img/logo.png" alt="" />
+            <img class="img" src="/assets/img/logo.png" alt="" />
           </div>
           <div class="footer__copyright--links">
             <ul class="list-unstyled footer__copyright--items">
@@ -391,15 +411,52 @@
     <script src="/assets/js/bootstrap/bootstrap.bundle.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- Magnifier -->
+    <script src="/assets/js/Magnifier.js"></script>
+    <script src="/assets/js/Event.js"></script>
     <!-- Custom Js -->
     <script>
-      let dashIcon = document.querySelector(".dash-icon");
-      let minusIcon = document.querySelector(".bi-dash-lg");
-      let listCategory = document.querySelector(".list__category--contents");
-      dashIcon.onclick = function () {
-        minusIcon.classList.toggle("bi-plus-lg");
-        listCategory.classList.toggle("list__category--contents-hide");
-      };
+      // list image
+      listImage = document.querySelectorAll(".list__image");
+      mainImage = document.querySelector(".list__main-image");
+
+      for (let i = 0; i < listImage.length; i++) {
+        listImage[i].addEventListener("click", function () {
+          var getSrc = listImage[i].src;
+          mainImage.src = getSrc;
+        });
+      }
+
+      var evt = new Event(),
+        m = new Magnifier(evt);
+      m.attach({
+        thumb: "#thumb",
+        large: "/assets/img/gold.png",
+        largeWrapper: "preview",
+      });
+
+      let getValue = document.getElementById("quantity__amount");
+
+      function increaseCount() {
+        var input = getValue.value;
+        var value = parseInt(input);
+        value = isNaN(value) ? 0 : value;
+        value++;
+        getValue.value = value;
+
+        console.log(getValue.value);
+      }
+
+      function decreaseCount(a, b) {
+        var input = getValue.value;
+        var value = parseInt(input);
+        if (value > 1) {
+          value = isNaN(value) ? 0 : value;
+          value--;
+          getValue.value = value;
+        }
+        console.log(getValue.value);
+      }
     </script>
   </body>
 </html>
