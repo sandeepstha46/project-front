@@ -1372,7 +1372,7 @@ header {
 /* Lists: Products */
 
 .product-list{
-    display: grid;
+    display: flex;
 }
 
 .products > .row:not(:last-child){
@@ -1521,7 +1521,7 @@ header {
         padding: 0px 16px;
     }
     .product-list{
-        grid-template-columns: repeat(1,1fr);
+        flex-direction: column;
     }
 
     .lists{
@@ -1580,7 +1580,7 @@ header {
         padding: 0px 18px;
     }
     .product-list{
-        grid-template-columns: repeat(1,1fr);
+        flex-direction: column;
     }
 
     .lists{
@@ -1630,7 +1630,7 @@ header {
         padding: 0px 16px;
     }
     .product-list{
-        grid-template-columns: repeat(1,1fr);
+        flex-direction: column;
     }
 
     .lists{
@@ -1686,6 +1686,10 @@ header {
 }
 
 @media (min-width: 768px) and (max-width: 997px) {
+
+    .product-list{
+        flex-direction: column;
+    }
     
     .lists-data > .lists__category:not(:last-child){
         padding-bottom: 20px;
@@ -1736,7 +1740,12 @@ header {
     }
 
     .products{
+        width: 100%;
         padding-left: 40px;
+    }
+
+    .lists__items{
+        width: 300px;
     }
 
     .lists__products--items{
@@ -1760,7 +1769,8 @@ header {
     }
 
     .products{
-        padding-left: 20px;
+        width: 100%;
+        padding-left: 40px;
     }
 
     .lists .lists__item-card{
@@ -1786,12 +1796,15 @@ header {
         padding-right: 18px;
         padding-left: 18px;
     }
-    .product-list{
-        grid-template-columns: 200px auto;
-    }
     .products{
+        width: 100%;
         padding-left: 30px;
     }
+
+    .lists__items{
+        width: 250px;
+    }
+
     .lists-data > .lists__category:not(:last-child){
         padding-bottom: 20px;
     }
@@ -1808,11 +1821,13 @@ header {
 }
 
 @media(min-width: 1600px){
-    .product-list{
-        grid-template-columns: 250px auto;
-    }
     .products{
+        width: 100%;
         padding-left: 50px;
+    }
+
+    .lists__items{
+        width: 260px;
     }
     .lists-data > .lists__category:not(:last-child){
         padding-bottom: 20px;
