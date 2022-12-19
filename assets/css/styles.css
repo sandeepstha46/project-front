@@ -1372,6 +1372,55 @@ header {
     width: 100px
 }
 
+.rating{
+    border: none;
+    float: left;
+}
+
+.rating > input{
+    display: none;
+}
+
+#star5{
+    background-color: red;
+}
+
+.rating > label:before{
+    content: '\f586';
+    font-family: bootstrap-icons;
+    margin: 5px;
+    font-size: 1.5rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.rating > .half:before{
+    content: '\f587';
+    position: absolute;
+    cursor: pointer;
+}
+
+
+.rating > label{
+    color: #ddd;
+    float: right;
+    cursor: pointer;
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover, 
+.rating:not(:checked) > label:hover ~ label{
+    color: #FFC700;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label{
+    color: #FFC700;
+}
+
+
 
 /* Lists: Products */
 
